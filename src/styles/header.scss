@@ -1,0 +1,35 @@
+header{
+
+    .web-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 20px;
+        .container-left{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .brand-logo{
+                color: rgb(210 214 220);
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 18px;
+                margin-right: 12px;
+            }
+           a{
+            button{
+                &.solid{
+                    background-color: rgb(175 181 190);
+                    color: #333c48;
+                }
+            }
+          
+           }
+        }
+        .container-right{
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+    }
+}

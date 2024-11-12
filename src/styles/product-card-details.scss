@@ -1,0 +1,113 @@
+.product-card-details {
+  list-style: none;
+  padding: 20px 0;
+  display: inline-flex;
+  width: 100%;
+  gap: 24px;
+  flex-wrap: wrap;
+  .product-card-detail {
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    .product-card-left {
+      width: 400px;
+      border-right: 0.5px solid #afb5be;
+      padding-right: 20px;
+      .product-image {
+        width: 100%;
+        height: auto;
+      }
+      a {
+        text-decoration: none;
+        color: #9d9d9d;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        button {
+          margin-top: 20px;
+          padding: 15px 12px;
+          border-radius: 8px;
+          font-size: 22px;
+          font-weight: 700;
+          img {
+            width: 32px;
+          }
+        }
+      }
+    }
+    .product-card-right {
+      width: calc(100% - 400px);
+      .product-name {
+        color: rgb(107 108 111);
+        font-weight: 700;
+        padding: 18px 0 0;
+        font-size: 28px;
+        text-transform: capitalize;
+      }
+      .product-description {
+        padding-top: 10px;
+        font-family: "Barlow", sans-serif;
+        font-size: 18px;
+        color: #94949a;
+      }
+      .card-footer {
+        margin-top: auto;
+      }
+      .meta-data {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+        .product-price {
+          color: rgb(53, 53, 67);
+          font-weight: 700;
+          font-size: 32px;
+          font-family: "barlow", sans-serif;
+          letter-spacing: 0.5px;
+          word-spacing: -3px;
+        }
+        .product-delivery {
+          color: #fefeff;
+          background: rgb(31, 41, 55);
+          padding: 6px 18px;
+          border-radius: 50px;
+          font-size: 14px;
+          font-weight: 600;
+          font-family: "barlow", sans-serif;
+          line-height: 23px;
+          letter-spacing: 0.3px;
+        }
+      }
+      .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 20px;
+        border-top: 0.5px solid #afb5be;
+        margin-top: 19px;
+        span {
+          border-radius: 25px;
+          padding: 7px 14px;
+          background: rgb(35, 187, 117);
+          color: rgb(255, 255, 255);
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 20px;
+          img {
+            width: 22px;
+          }
+        }
+        strong {
+          font-size: 18px;
+          font-family: "barlow", sans-serif;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          color: #a6a8ad;
+        }
+      }
+    }
+  }
+}

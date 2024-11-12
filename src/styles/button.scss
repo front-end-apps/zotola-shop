@@ -1,0 +1,26 @@
+button{
+    border: 0 solid gray;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+    cursor: pointer;
+    color: rgb(210, 214, 220);
+    transition: all ease 0.35s;
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    text-transform: capitalize;
+    justify-content: center;
+    img{
+        margin-right: 10px;
+    }
+    &:hover{
+        color: rgb(255 255 255);
+        background-color: rgb(55 65 81);
+    }
+    &.solid{
+        background-color: rgb(17 24 39);
+    }
+}
