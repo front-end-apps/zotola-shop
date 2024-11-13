@@ -10,6 +10,9 @@
             text-decoration: none;
             color: #9d9d9d;
             font-size: 14px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         width: calc(25% - 18px);
         padding: 24px 20px;
@@ -37,6 +40,24 @@
             padding: 18px 0 0;
             font-size: 22px;
             text-transform: capitalize;
+            margin-top: auto;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .category {
+        .card {
+            width: calc((100% / 2) - 12px);
+        }
+    }
+}
+@media (max-width: 600px) {
+    .category {
+        .card {
+            width: 100%;
+            .product-image {
+                max-height: 180px;
+            }
         }
     }
 }

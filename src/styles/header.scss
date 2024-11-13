@@ -16,20 +16,54 @@ header{
                 font-size: 18px;
                 margin-right: 12px;
             }
-           a{
-            button{
-                &.solid{
-                    background-color: rgb(175 181 190);
-                    color: #333c48;
-                }
+            .menu{
+                a{
+                    button{
+                        &.solid{
+                            background-color: rgb(175 181 190);
+                            color: #333c48;
+                        }
+                    }
+                  
+                   }
             }
           
-           }
         }
         .container-right{
             display: flex;
             gap: 12px;
             align-items: center;
+        button{
+            border-radius: 40px;
+            &:first-of-type{
+                width: 88px;
+                img{
+                    width: 22px;
+                    height: auto;
+                }
+            }
+        }
         }
     }
+}
+@media (max-width: 768px) {
+
+  header{
+    .container-left{
+     .menu{
+        position: fixed;
+        bottom: 20px;
+        background: #1f2937;
+        z-index: 999;
+        padding: 10px 10px;
+        border-radius: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        button{
+            border-radius: 50px;
+        }
+     }   
+    }
+  }
 }

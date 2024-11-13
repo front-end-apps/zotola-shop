@@ -3,7 +3,7 @@ import '../styles/category.scss'
 import { Link } from "react-router-dom";
 
 interface CategoryProps {
-  items: CategoryItem[]; // Now each item is a CategoryItem with name and image
+  items: any[]; 
 }
 
 const Category: React.FC<CategoryProps> = ({ items }) => {

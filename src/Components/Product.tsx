@@ -1,7 +1,7 @@
 import "../styles/product-card.scss";
 import { Link } from "react-router-dom";
-import startRatingIcon from '../assets/icons/star.svg'
-function slugify(str) {
+import startRatingIcon from '../assets/icons/star.svg';
+function slugify(str: any) {
   return str
     .toLowerCase() 
     .trim() 
@@ -12,7 +12,7 @@ function slugify(str) {
 }
 
 interface CategoryProps {
-  items: CategoryItem[]; // Now each item is a CategoryItem with name and image
+  items: any[]; 
 }
 
 const Product: React.FC<CategoryProps> = ({ items }) => {
@@ -42,7 +42,7 @@ const Product: React.FC<CategoryProps> = ({ items }) => {
               <div className="product-delivery">Free delivery</div>
             </div>
             <div className="product-rating">
-              <span>{category.rating.rate} <img src={startRatingIcon} alt="" /></span>
+            <span className={category.rating.rate < 3 ? 'red' : category.rating.rate < 4 ? 'yellow' : ''}>{category.rating.rate} <img src={startRatingIcon} alt="" /></span>
               <strong>{category.rating.count} Reviews</strong>
             </div>
             </div>

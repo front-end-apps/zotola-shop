@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Product from "../Components/Product";
-import { useLocation } from "react-router-dom"; // Import useLocation hook
-import getQueryParamFromURL from "../utils"; // Assuming it's already imported
+import { useLocation } from "react-router-dom"; 
+import getQueryParamFromURL from "../utils"; 
 
 interface Product {
   id: number;
@@ -37,10 +37,11 @@ const Products = () => {
         const queryString = getQueryParamFromURL("category", location.search);
 
         // Ensure queryString is valid before filtering
-        const filteredCategories = data.filter(
+        const filteredCategories = queryString ? data.filter(
           (item) =>
             item.category.slice(0, 3).toLowerCase() === queryString.slice(0, 3).toLowerCase() 
-        );
+        )
+        : [];
 
         setCategories(filteredCategories);
         setLoading(false);

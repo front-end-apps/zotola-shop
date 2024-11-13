@@ -88,6 +88,12 @@
         align-items: center;
         justify-content: center;
         gap: 4px;
+        &.yellow{
+          background: #FFC107;
+        }
+        &.red{
+          background:  #FF5722;;
+        }
         img {
           width: 16px;
         }
@@ -100,5 +106,10 @@
         color: #a6a8ad;
       }
     }
+  }
+}
+@media (max-width: 768px){
+  .product-card{
+    padding-bottom: 80px;
   }
 }

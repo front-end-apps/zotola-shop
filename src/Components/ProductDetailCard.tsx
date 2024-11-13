@@ -4,7 +4,7 @@ import Button from "./Button";
 import addToCardIcon from '../assets/icons/cart.svg'
 import startIcon from '../assets/icons/star.svg'
 
-function slugify(str) {
+function slugify(str: any) {
   return str
     .toLowerCase()
     .trim()
@@ -15,7 +15,7 @@ function slugify(str) {
 }
 
 interface CategoryProps {
-  items: CategoryItem[]; // Now each item is a CategoryItem with name and image
+  items: any[]; 
 }
 
 const ProductDetailCard: React.FC<CategoryProps> = ({ items }) => {
@@ -30,7 +30,7 @@ const ProductDetailCard: React.FC<CategoryProps> = ({ items }) => {
               className="product-image"
             />
             <Link to={`/products/${slugify(category.title)}?id=${category.id}`}>
-            <Button text="Add to Cart" solid="solid" icon={addToCardIcon} sizes="32x32"/>
+            <Button text="Add to Cart" solid={true} icon={addToCardIcon} />
             </Link>
           </div>
           <div className="product-card-right">
@@ -46,7 +46,7 @@ const ProductDetailCard: React.FC<CategoryProps> = ({ items }) => {
                 <div className="product-delivery">Free delivery</div>
               </div>
               <div className="product-rating">
-                <span>{category.rating.rate} <img src={startIcon} alt="" /></span>
+                <span className={category.rating.rate < 3 ? 'red' : category.rating.rate < 4 ? 'yellow' : ''}>{category.rating.rate} <img src={startIcon} alt="" /></span>
                 <strong>{category.rating.count} Reviews</strong>
               </div>
             </div>

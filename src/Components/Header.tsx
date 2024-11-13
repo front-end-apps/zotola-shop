@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
 import "../styles/header.scss";
@@ -24,17 +23,19 @@ const Header = () => {
           <a href="/" className="brand-logo">
             Zotola Shop
           </a>
+          <div className="menu">
           {products.map((product, index) => {
             const isActiveCategory = product.name.split("'")[0] === queryCategory;
             return (
               <Link key={index} to={`/products?category=${encodeURIComponent(product.name.split("'")[0])}`}>
                 <Button 
                   text={product.name} 
-                  solid={isActiveCategory ? 'solid' : ''} 
+                  solid={isActiveCategory && true} 
                 />
               </Link>
             );
           })}
+          </div>
         </div>
         <div className="container-right">
           <Button text="Cart" icon={CartIcon} />

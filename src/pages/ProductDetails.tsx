@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductDetailCard from "../Components/ProductDetailCard";
-import { useLocation } from "react-router-dom"; // Import useLocation hook
-import getQueryParamFromURL from "../utils"; // Assuming it's already imported
+import { useLocation } from "react-router-dom";
+import getQueryParamFromURL from "../utils";
 
 interface Product {
   id: number;
