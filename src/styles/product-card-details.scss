@@ -96,6 +96,12 @@
           align-items: center;
           gap: 4px;
           font-size: 20px;
+          &.yellow{
+            background: #ffc107;
+          }
+          &.red{
+            background: #ff5722;
+          }
           img {
             width: 22px;
           }
