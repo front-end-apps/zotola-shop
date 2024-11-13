@@ -21,7 +21,7 @@ const Header = () => {
       <nav className="container web-nav">
         <div className="container-left">
           <a href="/" className="brand-logo">
-            Zotola Shop
+            Zotola eShop
           </a>
           <div className="menu">
           {products.map((product, index) => {
