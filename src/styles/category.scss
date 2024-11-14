@@ -53,10 +53,19 @@
 }
 @media (max-width: 600px) {
     .category {
+        gap: 12px;
         .card {
-            width: 100%;
+            padding: 10px 8px;
+            width: calc(50% - 6px);
+            border-radius: 6px;
+            border-width: 0.5px;
             .product-image {
-                max-height: 180px;
+                max-height: 142px;
+            }
+            .product-name{
+                padding: 10px 0 0;
+                font-size: 16px;
+                font-family: 'barlow', sans-serif;
             }
         }
     }

@@ -31,7 +31,7 @@
     content: "";
     height: 100px;
     position: absolute;
-    width: 200px;
+    width: 50px;
     z-index: 2;
   }
   .slider::after {
@@ -62,4 +62,19 @@
         padding: 10px;
         height: 100%;
     }
+  }
+  @media (max-width: 768px){
+    .slider::before, .slider::after{
+      width: 15px;
+      height: 85px;
+    }
+  }
+  @media (max-width: 600px){
+    .slider{
+      margin-top: 15px;
+      .slide {
+        height: 85px;
+        width: 117px;
+      }
+    } 
   }
